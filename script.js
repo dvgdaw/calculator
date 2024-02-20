@@ -1,4 +1,16 @@
 
+function changeColor() {
+
+    // Cambia el color del body
+    document.body.classList.toggle("dark-background");
+
+    // Cambia el color de la calculadora
+    document.getElementById("calculator").classList.toggle("dark-keys");
+
+    document.getElementById("color-mode").classList.toggle("dark-button");
+
+}
+
 function introduceNumber(num) {
 
     document.getElementById("result").value += num;
@@ -6,8 +18,6 @@ function introduceNumber(num) {
 }
 
 function introduceOperator(operator) {
-
-
 
     let currentInput = document.getElementById("result").value;
 
@@ -20,9 +30,9 @@ function introduceOperator(operator) {
     let lastChar = currentInput.slice(-1);
 
     // Verificar si el último carácter es un símbolo aritmético
-    if (['+', '-', '*', '/'].includes(lastChar)) {
+    if (['.', '+', '-', '*', '/'].includes(lastChar)) {
         // Si es un símbolo aritmético, no agregar otro
-        if (['+', '-', '*', '/'].includes(operator)) {
+        if (['.', '+', '-', '*', '/'].includes(operator)) {
             return;
         }
     }

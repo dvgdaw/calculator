@@ -4,6 +4,8 @@
     box-sizing: border-box;
 }
 
+/* Calculator */
+
 .flex-container {
     display: flex;
     justify-content: center; /* Centra horizontalmente */
@@ -51,4 +53,35 @@ table td {
     background-color: lightgreen;
 }
 
+/* Dark mode */
 
+.color-mode-container {
+    padding: 5px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.color-mode {
+    width: 40px;
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    background-color: black;
+    border-radius: 50%;
+    cursor: pointer;
+    color: white;
+}
+
+.dark-background {
+    background-color: black;
+}
+
+.dark-keys {
+    background-color: white;
+}
+
+.dark-button {
+    background-color: white;
+    color: black;
+}
