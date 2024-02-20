@@ -6,60 +6,48 @@
     <title>Calculator</title>
 
     <link rel="stylesheet" href="style.css">
+
+    <script src="script.js"></script>
+
 </head>
 <body>
-    
-    <div class="calculator">
 
-        <div class="result">
-            <input type="text" id="display" disabled>
-        </div>
+    <div class="flex-container">
 
-        <div class="keys">
+        <div class="calculator">
 
-            <div class="left">
 
-                <div>
-                    <button class="key" onclick="addToDisplay('7')">7</button>
-                    <button class="key" onclick="addToDisplay('8')">8</button>
-                    <button class="key" onclick="addToDisplay('9')">9</button>
-                    <button class="key" onclick="addToDisplay('/')">/</button>
-                </div>
-                <div>
-                    <button class="key" onclick="addToDisplay('4')">4</button>
-                    <button class="key" onclick="addToDisplay('5')">5</button>
-                    <button class="key" onclick="addToDisplay('6')">6</button>
-                    <button class="key" onclick="addToDisplay('*')">*</button>
-                </div>
-                <div>
-                    <button class="key" onclick="addToDisplay('1')">1</button>
-                    <button class="key" onclick="addToDisplay('2')">2</button>
-                    <button class="key" onclick="addToDisplay('3')">3</button>
-                    <button class="key" onclick="addToDisplay('-')">-</button>
-                </div>
-                <div>
-                    <button class="key" onclick="addToDisplay('0')">0</button>
-                    <button class="key" onclick="addToDisplay(',')">,</button>
-                    <button class="key" onclick="addToDisplay('%')">%</button>
-                    <button class="key" onclick="addToDisplay('+')">+</button>
-                </div>
-
-            </div>
-
-            <div class="right">
-
-                <div>
-                    <button onclick="clearDisplay()">C</button>
-
-                </div>
-                <div>
-                    <button class="key equal" onclick="calculate()">=</button>
-                </div>
-
-            </div>
-
-        </div>
-
+        <table class="">
+            <tr>
+                <td class="result" colspan="3"><input type="text" id="result"></td>
+                <td class="key key_cancel"><input type="button" value="c" onclick="clearResult()"></td>
+            </tr>
+            <tr>
+                <td class="key"><input type="button" value="7" onclick="introduceNumber('7')"></td>
+                <td class="key"><input type="button" value="8" onclick="introduceNumber('8')"></td>
+                <td class="key"><input type="button" value="9" onclick="introduceNumber('9')"></td>
+                <td class="key key_color"><input type="button" value="÷" onclick="introduceOperator('/')"></td>
+            </tr>
+            <tr>
+                <td class="key"><input type="button" value="4" onclick="introduceNumber('4')"></td>
+                <td class="key"><input type="button" value="5" onclick="introduceNumber('5')"></td>
+                <td class="key"><input type="button" value="6" onclick="introduceNumber('6')"></td>
+                <td class="key key_color"><input type="button" value="x" onclick="introduceOperator('*')"></td>
+            </tr>
+            <tr>
+                <td class="key"><input type="button" value="1" onclick="introduceNumber('1')"></td>
+                <td class="key"><input type="button" value="2" onclick="introduceNumber('2')"></td>
+                <td class="key"><input type="button" value="3" onclick="introduceNumber('3')"></td>
+                <td class="key key_color"><input type="button" value="-" onclick="introduceOperator('-')"></td>
+            </tr>
+            <tr>
+                <td class="key"><input type="button" value="0" onclick="introduceNumber('0')"></td>
+                <td class="key"><input type="button" value="." onclick="introduceNumber('.')"></td>
+                <td class="key key_result"><input type="button" value="=" onclick="getResult()"></td>
+                <td class="key key_color"><input type="button" value="+" onclick="introduceOperator('+')"></td>
+            </tr>
+        </table>
+    </div>
     </div>
 
 </body>
