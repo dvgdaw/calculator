@@ -26,3 +26,7 @@
     background-color: hsla(0, 0%, 35%, 0.185);
     cursor: pointer;
 }
+
+.equal {
+    background-color: lightgreen;
+}
