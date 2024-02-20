@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.calculator {
+    margin-top: 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.keys {
+    display: flex;
+}
+
+.keys .right {
+    display: flex;
+    flex-direction: column;
+}
+
+.key {
+    padding: 1em;
+    border: none;
+    background-color: hsla(0, 0%, 35%, 0.185);
+    cursor: pointer;
+}
